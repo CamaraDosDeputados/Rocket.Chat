@@ -489,11 +489,8 @@ test.describe('[Administration]', () => {
 		});
 
 		test.describe('[Settings Groups]', () => {
-			test.beforeAll(async () => {
-				await admin.groupSettingsPageBack().click();
-			});
-
 			test('expect render each setting group page', async () => {
+				await admin.groupSettingsPageBack().click();
 				const blocks = admin.getSettingsGroupBoxes();
 				const count = await blocks.count();
 
